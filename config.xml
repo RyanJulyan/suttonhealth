@@ -63,7 +63,7 @@
     </platform>
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
-    <gap:plugin name="onesignal-cordova-plugin" spec="^2.5.2" />
+    <gap:plugin name="onesignal-cordova-plugin" spec="2.4.5" source="npm" />
 
 	<!-- Requires cli-8.0.0 but we recommend using the latest version. -->
 	<preference name="phonegap-version" value="cli-8.0.0" />
