@@ -7,6 +7,10 @@
     <access origin="*" />
 	<access origin="file://*" />
 	
+	<allow-navigation src="*" />
+    <allow-intent src="http://*/*" />
+    <allow-intent src="https://*/*" />
+	
 	<allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
