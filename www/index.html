@@ -32,9 +32,9 @@
 	<script>
 		function openBrowser() {
 		   window.open = cordova.InAppBrowser.open;
-		   var url = 'https://cordova.apache.org';
+		   var url = 'https://suttonhealth.magnesium.a2hosted.com';
 		   var target = '_blank';
-		   var options = "location = yes"
+		   var options = "location = no"
 		   var ref = cordova.InAppBrowser.open(url, target, options);
 		   
 		   ref.addEventListener('loadstart', loadstartCallback);
