@@ -5,9 +5,13 @@
     <author email="ryan@magnesium.tech" href="https://magnesium.tech">Ryan Julyan</author>
     <content src="index.html" />
     <access origin="*" />
+	<access origin="file://*" />
 	<allow-navigation href="*" />
+	<allow-navigation href="https://suttonhealth.magnesium.a2hosted.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="https://*/*/*" />
+    <allow-intent href="https://*/*/*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
