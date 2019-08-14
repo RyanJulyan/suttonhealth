@@ -11,6 +11,10 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 	
+	<allow-navigation href="https://suttonhealth.magnesium.a2hosted.com/*" />
+    <allow-intent href="http://suttonhealth.magnesium.a2hosted.com/*" />
+    <allow-intent href="https://suttonhealth.magnesium.a2hosted.com/*" />
+	
     <allow-intent href="https://*/*/*" />
     <allow-intent href="https://*/*/*/*" />
 	
