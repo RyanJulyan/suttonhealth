@@ -11,6 +11,7 @@
 					script-src * 'self' 'unsafe-inline' 'unsafe-eval' gap:;
 					img-src * filesystem: data:;
 					media-src *;
+					frame-src 'self' https://suttonhealth.magnesium.a2hosted.com/*
 					">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -28,46 +29,17 @@
 </head>
 <body style="margin:0px;padding:0px;overflow:hidden">
 	
+    <iframe src="https://suttonhealth.magnesium.a2hosted.com/public/storage/icons/ENVIRONMENT.svg" frameborder="0" scrolling="no" style="border:0; overflow:hidden; overflow-x:hidden; overflow-y: hidden; height:100%; width: 1px; min-width: 100%; *width: 100%; position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
 	
-	<div style="width:97%;padding:20px;height:100vh;">
-		<img src="img/Default@3x~iphone~anyany.png" alt="Logo" style="max-height:97%; max-width:97%; display: block; margin-left: auto; margin-right: auto;">
-	</div>
-   
 	<script>
-		function openBrowser() {
-		   window.open = cordova.InAppBrowser.open;
-		   var url = 'https://suttonhealth.magnesium.a2hosted.com';
-		   var target = '_blank';
-		   var options = "location = no, clearcache = yes, hideurlbar = yes,hidenavigationbuttons = yes,toolbar = no"
-		   var ref = cordova.InAppBrowser.open(url, target, options);
-		   
-		   ref.addEventListener('loadstart', loadstartCallback);
-		   ref.addEventListener('loadstop', loadstopCallback);
-		   ref.addEventListener('loaderror', loaderrorCallback);
-		   ref.addEventListener('exit', exitCallback);
-
-		   function loadstartCallback(event) {
-			  console.log('Loading started: '  + event.url)
-		   }
-
-		   function loadstopCallback(event) {
-			  console.log('Loading finished: ' + event.url)
-		   }
-
-		   function loaderrorCallback(error) {
-			  console.log('Loading error: ' + error.message)
-		   }
-
-		   function exitCallback() {
-			  console.log('Browser is closed...')
-		   }
-		}
-		
-		document.addEventListener("deviceready", onDeviceReady, false);
-		function onDeviceReady() {
-			openBrowser();
-		}
+		var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+		var eventer = window[eventMethod];
+		var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+		eventer(messageEvent,function(e) {
+		if (e.data.substring(0,3)=='frm') document.getElementById('estframe').style.height = e.data.substring(3) + 'px';
+		},false);
 	</script>
+	
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </body>
