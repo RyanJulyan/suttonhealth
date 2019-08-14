@@ -38,12 +38,7 @@
 		   window.open = cordova.InAppBrowser.open;
 		   var url = 'https://suttonhealth.magnesium.a2hosted.com';
 		   var target = '_blank';
-		   var options = {
-						  "location": "no", 
-						  "hideurlbar": "yes", 
-						  "hidenavigationbuttons": "yes", 
-						  "toolbar": "no"
-						}
+		   var options = "location = no, hideurlbar = yes,hidenavigationbuttons = yes,toolbar = no"
 		   var ref = cordova.InAppBrowser.open(url, target, options);
 		   
 		   ref.addEventListener('loadstart', loadstartCallback);
