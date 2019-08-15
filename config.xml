@@ -88,4 +88,12 @@
 		<string>We are using Location services to allow users to use Googles' places and location API to find services of interest close to the user. We Do not store the users location data on the App nor do we intend to analyze the data that the user inputs through this service for any purpose.</string>
 	</config-file>
 	
+	<edit-config platform="ios" target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+		<string>We are using Location services to allow users to use Googles' places and location API to find services of interest close to the user. We Do not store the users location data on the App nor do we intend to analyze the data that the user inputs through this service for any purpose.</string>
+	</edit-config>
+	
+	<config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+		<string>We are using Location services to allow users to use Googles' places and location API to find services of interest close to the user. We Do not store the users location data on the App nor do we intend to analyze the data that the user inputs through this service for any purpose.</string>
+	</config-file>
+	
 </widget>
